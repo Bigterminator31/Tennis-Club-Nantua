@@ -1,0 +1,218 @@
+/* =========================================================
+   style.css - Tennis Club de Nantua
+   ========================================================= */
+
+:root {
+  --green: #ffffff;
+  --light: #2074bc;
+  --accent: #2074bc;
+  --muted: #666;
+  --maxwidth: 1100px;
+}
+
+/* ---------- RESET ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  margin: 0;
+  background: var(--light);
+  color: #222;
+  line-height: 1.45;
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+  max-width: var(--maxwidth);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background: linear-gradient(90deg, var(--green), var(--accent));
+  color: #fff;
+  padding: 18px 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-width: var(--maxwidth);
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 80px; /* ne change pas la hauteur du header */
+  transform: scale(1.3); /* agrandit visuellement le logo */
+  transform-origin: center;
+}
+
+/* ---------- NAVIGATION ---------- */
+nav {
+  margin-left: auto;
+}
+
+/*Liens de navigationen noir */
+nav a {
+  color: #000000;
+  text-decoration: none;
+  margin-left: 18px;
+  font-weight: 600;
+}
+
+nav a:hover,
+nav a.active {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 28px 18px;
+  background: transparent;
+}
+
+.hero .intro {
+  max-width: 720px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.lead {
+  color: #f0f7f0;
+}
+
+/* ---------- QUICK LINKS ---------- */
+.quicklinks {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.btn {
+  background: #fff;
+  color: #000000; /*  Boutons en texte noir */
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* ---------- CARDS ---------- */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(20, 20, 20, 0.06);
+  margin-bottom: 18px;
+}
+
+/* ---------- GRID ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background: #2074bc;
+  color: #cfead6;
+  padding: 18px;
+  margin-top: 28px;
+}
+
+footer .small {
+  font-size: 13px;
+  color: #e8f7ea;
+}
+
+/* ---------- MAIN ---------- */
+main {
+  padding: 18px;
+}
+
+/* ---------- SECTION TITLE ---------- */
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+/* ---------- TABLES ---------- */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+/* ---------- FORMS ---------- */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.form-row input,
+.form-row textarea,
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  flex: 1;
+}
+
+/* ---------- GALLERY ---------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.img-thumb {
+  background: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  display: block;
+}
+
+/* ---------- SMALL TEXT ---------- */
+.small-muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 700px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-left: 0;
+  }
+}
