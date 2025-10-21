@@ -1,0 +1,3 @@
+# Interdire l’accès direct aux fichiers
+Order Deny,Allow
+Deny from all
