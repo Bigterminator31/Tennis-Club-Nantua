@@ -1,0 +1,11 @@
+Add in sudo nano /etc/apache2/sites-available/000-default.conf
+in directory add 
+<Directory /var/www/html>
+    AllowOverride All
+</Directory>
+In htaccess put 
+  sudo nano /var/www/html/.htaccess
+and add in file :
+  ErrorDocument 404 /404.html
+Restart Apache2 sudo systemctl restart apache2
+And now the 404.html file is good.
